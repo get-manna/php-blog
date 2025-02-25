@@ -53,8 +53,8 @@ $result = mysqli_query($conn, $sql);
                 </div>
             </div>
 
-            <div class="border rounded-lg mt-10">
-                <table>
+            <div class=" border rounded-lg mt-10">
+                <table class="table-auto w-full">
                     <thead>
                         <tr>
                             <th class="border bg-gray-100 px-4 py-2">ID</th>
@@ -77,6 +77,8 @@ $result = mysqli_query($conn, $sql);
                             $category = mysqli_fetch_assoc($category_result);
 
                             //
+
+                            
                             echo "<td class='border px-4 py-2'>" . $category['name'] . "</td>";
                             echo "<td class='border px-4 py-2'><a href='/admin/editpost.php?id=" . $row['id'] . "' class='bg-blue-500 text-white px-4 py-1 rounded'>Edit</a> <a href='/admin/deletepost.php?id=" . $row['id'] . "' class='bg-red-500
                             text-white px-4 py-1 rounded'>Delete</a></td>";

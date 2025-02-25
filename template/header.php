@@ -8,9 +8,8 @@
       <nav class="hidden md:flex space-x-6 font-serif">
         <a href="#" class="text-white ">Home</a>
         <a href="#" class="text-white">About</a>
-        <a href="#" class="text-white ">Cetagory</a>
         <a href="blog.php" class="text-white ">Blog</a>
-        <a href="#" class="text-white ">Singel Blog</a>
+
         <a href="#" class="text-white ">Contact</a>
       </nav>
 

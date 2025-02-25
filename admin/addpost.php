@@ -5,15 +5,19 @@ if (isset($_POST['submit'])) {
 
     $title = $_POST['title'];
     $description = $_POST['description'];
-    $category_id = $_POST['category_id'];
+    $category_id = $_POST['category'];
     $created_at =  date("d-m-y h:i:s");
 
     // Corrected SQL Query
     $sql = "INSERT INTO `posts` ( title, category_id, description, created_at) 
-            VALUES ('$id', '$title', '$category_id', '$description', '$created_at')";
+            VALUES ( '$title', '$category_id', '$description', '$created_at')";
 
     $result = mysqli_query($conn, $sql);
 }
+
+// 
+
+
 ?>
 
 <!DOCTYPE html>
