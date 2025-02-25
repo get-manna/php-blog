@@ -1,16 +1,15 @@
 <?php
-include('./config/conection.php');
+include('../config/conection.php');
 
 if (isset($_POST['submit'])) {
 
-    $id =  $_POST['id'];
     $title = $_POST['title'];
     $description = $_POST['description'];
     $category_id = $_POST['category_id'];
     $created_at =  date("d-m-y h:i:s");
 
     // Corrected SQL Query
-    $sql = "INSERT INTO `posts` (id, title, category_id, description, created_at) 
+    $sql = "INSERT INTO `posts` ( title, category_id, description, created_at) 
             VALUES ('$id', '$title', '$category_id', '$description', '$created_at')";
 
     $result = mysqli_query($conn, $sql);
@@ -38,7 +37,7 @@ if (isset($_POST['submit'])) {
             <main class="flex-1 p-6">
                 <!-- Top Navigation -->
                 <div class="flex justify-between items-center bg-white p-4 shadow-md rounded-lg">
-                    <h1 class="text-2xl font-semibold">Add Post</h1>
+                    <h1 class="text-2xl font-semibold">Add New Post</h1>
                 </div>
 
                 <!-- Form -->
@@ -53,25 +52,27 @@ if (isset($_POST['submit'])) {
                             <label for="description" class="block text-gray-700 font-bold mb-2">Description</label>
                             <input type="text" id="description" name="description" required class="w-full p-2 border border-gray-300 rounded">
 
+
+
                             <div class="">
                                 <label for="category" class="block text-gray-700 font-bold mb-2">Choose a Category</label>
                                 <select id="category" name="category" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 
                                     <?php
 
-                                    $sql = "SELECT * FROM categories";
-                                    $result = mysqli_query($conn, $sql);
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
+                                    $category_sql = "SELECT * FROM categories";
+                                    $category_result = mysqli_query($conn, $category_sql);
+  
+                                    
+                                    while ($category = mysqli_fetch_assoc($category_result)) {
+                                        echo "<option value='" . $category['id'] . "'>" . $category['name'] . "</option>";
                                     }
 
 
                                     ?>
-
-
-
                                 </select>
                             </div>
+
 
 
 
