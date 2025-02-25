@@ -32,14 +32,13 @@ if (isset($_POST['submit'])) {
     <main>
         <div class="flex h-screen">
             <!-- Sidebar -->
-            <?php include('./admin/layout/sidebar.php'); ?>
+            <?php include('./layout/sidebar.php'); ?>
 
             <!-- Main Content -->
             <main class="flex-1 p-6">
                 <!-- Top Navigation -->
                 <div class="flex justify-between items-center bg-white p-4 shadow-md rounded-lg">
                     <h1 class="text-2xl font-semibold">Add Post</h1>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded">Logout</button>
                 </div>
 
                 <!-- Form -->
