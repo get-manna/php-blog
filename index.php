@@ -2,7 +2,6 @@
 include('./config/conection.php');
 $sql = "SELECT * FROM posts";
 $result = mysqli_query($conn, $sql);
-
 ?>
 
 <!DOCTYPE html>
