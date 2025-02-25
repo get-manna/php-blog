@@ -17,6 +17,8 @@ $result = mysqli_query($conn, $sql);
 <body class="bg-gray-100 text-gray-800">
 
 
+<!-- header -->
+<?php include('./template/header.php'); ?>
 
     <!-- Main Container -->
     <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row gap-6">
@@ -44,7 +46,7 @@ $result = mysqli_query($conn, $sql);
         </div>
 
 
-        
+
 
         <!-- Right Side: Category List -->
         <div class="w-full md:w-1/3 ">
@@ -70,6 +72,10 @@ $result = mysqli_query($conn, $sql);
         </div>
 
     </div>
+
+    <!-- footer  -->
+    <?php include('./template/footer.php'); ?>
+
 
 </body>
 

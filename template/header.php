@@ -6,8 +6,8 @@
 
       <!-- Center: Navigation Menu (Desktop) -->
       <nav class="hidden md:flex space-x-6 font-serif">
-        <a href="#" class="text-white ">Home</a>
-        <a href="#" class="text-white">About</a>
+        <a href="index.php" class="text-white ">Home</a>
+        <a href="about.php" class="text-white">About</a>
         <a href="blog.php" class="text-white ">Blog</a>
 
         <a href="#" class="text-white ">Contact</a>
