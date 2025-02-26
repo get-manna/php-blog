@@ -7,8 +7,8 @@
            </div>
             <ul>
                 <li class="mb-4"><a href="/admin" class="hover:text-gray-300">Dashboard</a></li>
-                <li class="mb-4"><a href="/admin/posts.php" class="hover:text-gray-300">Manage Post</a></li>
-                <li class="mb-4"><a href="/admin/categories.php" class="hover:text-gray-300">Manage Category</a></li>
+                <li class="mb-4"><a href="/admin/manageposts.php" class="hover:text-gray-300">Manage Post</a></li>
+                <li class="mb-4"><a href="/admin/managecategory.php" class="hover:text-gray-300">Manage Category</a></li>
 
             </ul>
         </aside>

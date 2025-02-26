@@ -33,7 +33,7 @@ $result = mysqli_query($conn, $sql);
             </div>
 
             <!-- Dashboard Widgets -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold">Total Posts</h3>
                     <p class="text-2xl mt-2">
@@ -46,12 +46,16 @@ $result = mysqli_query($conn, $sql);
                     </p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold">Revenue</h3>
-                    <p class="text-2xl mt-2">$12,345</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold">Orders</h3>
-                    <p class="text-2xl mt-2">567</p>
+                    <h3 class="text-xl font-semibold">Total Categories</h3>
+                    <p class="text-2xl mt-2">
+                        <?php 
+                         $post_category="SELECT * FROM categories";
+                         $post_category_result=mysqli_query($conn,$post_category);
+                         $total_category= mysqli_num_rows($post_category_result);
+                         echo $total_category;
+                         
+                         ?>
+                    </p>
                 </div>
             </div>
 
@@ -82,9 +86,12 @@ $result = mysqli_query($conn, $sql);
 
                             
                             echo "<td class='border px-4 py-2'>" . $category['name'] . "</td>";
-                            echo "<td class='border px-4 py-2'><a href='/admin/editpost.php?id=" . $row['id'] . "' class='bg-blue-500 text-white px-4 py-1 rounded'>Edit</a> <a href='/admin/deletepost.php?id=" . $row['id'] . "' class='bg-red-500
-                            text-white px-4 py-1 rounded'>Delete</a></td>";
+                            echo "<td class='border px-4 py-2'>
+                                    <a href='/admin/editpost.php?id=" . $row['id'] . "' class='bg-blue-500 text-white px-4 py-1 rounded'>Edit</a> 
+                                    <a href='/admin/deletepost.php?id=" . $row['id'] . "' class='bg-red-500 text-white px-4 py-1 rounded'>Delete</a>
+                                  </td>";
                             echo "</tr>";
+                            
                         }
                         ?>
                     </tbody>

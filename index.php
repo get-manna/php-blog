@@ -35,6 +35,7 @@ $result = mysqli_query($conn, $sql);
                     <h3 class="text-xl font-bold text-blue-600"> <?php echo  $row['title'] ?> </h3>
                     <p class="text-gray-600 text-sm mt-1"><?php echo  $row['created_at'] ?></p>
                     <p class="mt-3 text-gray-700"><?php echo  $row['description'] ?></p>
+                    <a href="singelblog.php?id=<?php echo $row['id']; ?>" class="text-blue-600 hover:underline mt-3">Explor Blog</a>
                 </div>
 
             <?php

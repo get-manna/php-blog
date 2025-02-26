@@ -6,7 +6,6 @@ if (isset($_GET['id'])) {
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -16,40 +15,41 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Header</title>
+    <title>Them</title>
 </head>
 
-<body>
-    <?php include('./template/header.php'); ?>
-
-    <main class="p-5 ">
-        <h2 class="font-bold text-blue-700 text-3xl">Singel Blog</h2>
+<body class="bg-gray-100 text-gray-800">
 
 
-        <div class="container mx-auto mt-8 p-4 md:flex gap-6">
+<!-- header -->
+<?php include('./template/header.php'); ?>
 
-            <div class="w-full md:w-2/3 bg-white p-6 rounded-lg shadow-lg">
+    <!-- Main Container -->
+    <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row gap-6">
+
+        <!-- Left Side: Blog List -->
+        <div class="w-full md:w-2/3">
+            <h2 class="text-2xl font-bold mb-4">Singel Blog Posts</h2>
+
+            
+        <div class="w-full  bg-white p-6 rounded-lg shadow-lg">
                 <img src="<?php echo './image/single-image.jpg'; ?>" alt="Blog Image" class="w-full h-72 object-cover rounded-lg">
 
-                <h1 class="text-4xl font-bold mt-4"><?php echo $row['title']; ?></h1>
-                <p class="text-gray-500 text-sm mt-1">Published on February 23, 2025</p>
+                <h1 class="text-3xl font-bold mt-4 text-blue-700 lowercase"><?php echo $row['title']; ?></h1>
+                <p class="text-gray-500 text-sm mt-4 "><?php echo $row['created_at']; ?></p>
 
-                <p class="mt-4 text-lg leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus varius ligula, nec tincidunt eros sodales nec. Nullam tincidunt magna ut odio fermentum, at tristique lectus vehicula.
-                </p>
-
-                <p class="mt-4 text-lg leading-relaxed">
-                    Vivamus faucibus, lectus a sagittis faucibus, risus nunc congue magna, a vulputate lorem nunc vel risus. Ut ornare elit quis lacus eleifend, nec eleifend dolor feugiat.
-                </p>
-
-                <p class="mt-4 text-lg leading-relaxed">
-                    Donec ut nisi eu erat vulputate facilisis. Duis pharetra metus sit amet justo pharetra, ac fringilla lectus tincidunt.
-                </p>
+                <p class="mt-2 text-lg leading-relaxed"><?php echo $row['description']; ?></p>
+                <a href="/index.php" class="text-blue-700 mt-4 rounded">view All Blog</a>
 
             </div>
 
+        </div>
 
-            <div class="w-full md:w-1/3">
+
+
+
+        <!-- Right Side: Category List -->
+        <div class="w-full md:w-1/3 mt-12">
                 <div class="bg-white p-4 rounded-lg shadow-lg">
                     <h2 class="text-2xl font-bold border-b pb-2 text-blue-700">Related Posts</h2>
                     <ul class="mt-3 space-y-2">
@@ -60,11 +60,16 @@ if (isset($_GET['id'])) {
                 </div>
             </div>
 
-        </div>
+    </div>
 
-    </main>
-
+    <!-- footer  -->
     <?php include('./template/footer.php'); ?>
+
+
 </body>
+
+</html>
+
+
 
 </html>
