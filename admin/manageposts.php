@@ -74,7 +74,7 @@ $result = mysqli_query($conn, $sql);
                         <?php
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo "<tr>";
-                            echo "<td class='border px-4 py-2'>" . $row['id'] . "</td>";
+                            echo "<td class='border px-4 '>" . $row['id'] . "</td>";
                             echo "<td class='border px-4 py-2'>" . $row['title'] . "</td>";
                             echo "<td class='border px-4 py-2'>" . $row['description'] . "</td>";
                            
@@ -85,9 +85,11 @@ $result = mysqli_query($conn, $sql);
                             //
 
                             
-                            echo "<td class='border px-4 py-2'>" . $category['name'] . "</td>";
+                            // echo "<td class='border px-4 py-2'>" . $category['name'] . "</td>";
                             echo "<td class='border px-4 py-2'>
                                     <a href='/admin/editpost.php?id=" . $row['id'] . "' class='bg-blue-500 text-white px-4 py-1 rounded'>Edit</a> 
+                                    </td>
+                                    <td class='border px-4 py-2'>
                                     <a href='/admin/deletepost.php?id=" . $row['id'] . "' class='bg-red-500 text-white px-4 py-1 rounded'>Delete</a>
                                   </td>";
                             echo "</tr>";
