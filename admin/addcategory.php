@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
                 <div class="bg-white p-6 rounded-lg shadow-md mt-6">
                     <form action="" method="post">
                         <div class="mb-4">
-                            <label for="Add_Category" class="block text-gray-700 font-bold mb-2">Add_Category</label>
+                            <label for="Add_Category" class="block text-gray-700 font-bold mb-2">Add Category</label>
                             <input type="text" id="Add_Category" name="Add_Category" required class="w-full p-2 border border-gray-300 rounded">
                             <button type="submit" class="py-2 px-8 mt-4 rounded bg-blue-700 text-white" name="submit">Add Category</button>
                         </div>
