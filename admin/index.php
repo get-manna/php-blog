@@ -32,18 +32,31 @@ $result = mysqli_query($conn, $sql);
             </div>
 
             <!-- Dashboard Widgets -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold">Total Users</h3>
-                    <p class="text-2xl mt-2">1,234</p>
+                    <p class="text-2xl mt-2">
+                         
+                        <?php
+                        $total_posts = "SELECT COUNT(*) as total FROM posts";
+                        $total_posts_result = mysqli_query($conn, $total_posts);
+                        $total = mysqli_fetch_assoc($total_posts_result);
+                        echo $total['total'];
+                        ?>
+
+                       
+                    </p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold">Revenue</h3>
-                    <p class="text-2xl mt-2">$12,345</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold">Orders</h3>
-                    <p class="text-2xl mt-2">567</p>
+                    <h3 class="text-xl font-semibold">Total Categories</h3>
+                    <p class="text-2xl mt-2">
+                    <?php
+                        $total_posts = "SELECT COUNT(*) as total FROM categories";
+                        $total_posts_result = mysqli_query($conn, $total_posts);
+                        $total = mysqli_fetch_assoc($total_posts_result);
+                        echo $total['total'];
+                        ?>
+                    </p>
                 </div>
             </div>
         </main>

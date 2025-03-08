@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $category_id = $_POST['category'];
     $created_at =  date("d-m-y h:i:s");
 
-    // $sql = "UPDATE posts SET title = ?, category_id = ?, description = ?, created_at = ? WHERE id = ?";
     $sql = "UPDATE posts SET title = '$title', description = '$description', category_id = '$category_id', created_at = '$created_at' WHERE id = '$_GET[id]'";
 
     $result = mysqli_query($conn, $sql);

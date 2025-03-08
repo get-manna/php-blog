@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Header</title>
+    <title>Manage posts</title>
 </head>
 
 <body>
@@ -85,7 +85,6 @@ $result = mysqli_query($conn, $sql);
                             //
 
                             
-                            // echo "<td class='border px-4 py-2'>" . $category['name'] . "</td>";
                             echo "<td class='border px-4 py-2'>
                                     <a href='/admin/editpost.php?id=" . $row['id'] . "' class='bg-blue-500 text-white px-4 py-1 rounded'>Edit</a> 
                                     </td>

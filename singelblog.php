@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Them</title>
+    <title>Blog</title>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
@@ -53,7 +53,7 @@ if (isset($_GET['id'])) {
                 <div class="bg-white p-4 rounded-lg shadow-lg">
                     <h2 class="text-2xl font-bold border-b pb-2 text-blue-700">Related Posts</h2>
                     <ul class="mt-3 space-y-2">
-                        <li><a href="#" class="text-blue-700 hover:underline">Understanding Tailwind CSS</a></li>
+                        <li><a href="#" class="text-blue-700 hover:underline"> <?php echo $row['title'] ?> </a></li>
                         <li><a href="#" class="text-blue-700 hover:underline">How to Build a Blog</a></li>
                         <li><a href="#" class="text-blue-700 hover:underline">Best Practices for Web Design</a></li>
                     </ul>

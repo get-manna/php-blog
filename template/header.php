@@ -1,3 +1,7 @@
+
+
+
+
 <header class="bg-[#563CDE] shadow-md">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
 
@@ -9,8 +13,8 @@
         <a href="index.php" class="text-white ">Home</a>
         <a href="about.php" class="text-white">About</a>
         <a href="blog.php" class="text-white ">Blog</a>
-
         <a href="#" class="text-white ">Contact</a>
+
       </nav>
 
       <!-- Mobile Menu Button -->
