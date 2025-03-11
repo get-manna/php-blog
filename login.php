@@ -1,4 +1,5 @@
 <?php
+include('./config/conection.php');
 
 session_start();
 $error = "";
@@ -7,13 +8,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST["email"]);
     $password = trim($_POST["password"]);
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($email, )) {
         $error = "Invalid email format";
     } elseif (empty($password)) {
         $error = "Password is required";
     } else {
-        $valid_email = "dev@gmail.com";
-        $valid_password = "123456";
+
+
+        $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $valid_email = $row["email"];
+            $valid_password = $row["password"];
+        }   
 
         if ($email == $valid_email && $password == $valid_password) {
             $_SESSION["user"] = $email;

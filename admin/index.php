@@ -3,6 +3,8 @@ include('../config/conection.php');
 $sql = "SELECT * FROM posts";
 $result = mysqli_query($conn, $sql);
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +14,7 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Header</title>
+    <title>deshboard</title>
 </head>
 
 <body>
@@ -28,7 +30,7 @@ $result = mysqli_query($conn, $sql);
             <!-- Top Navigation -->
             <div class="flex justify-between items-center bg-white p-4 shadow-md rounded-lg">
                 <h1 class="text-2xl font-semibold">Admin Dashboard</h1>
-                <button class="bg-blue-600 text-white px-4 py-2 rounded">Logout</button>
+                <a href="login.php" class="bg-blue-600 text-white px-4 py-2 rounded">Logout</a>
             </div>
 
             <!-- Dashboard Widgets -->

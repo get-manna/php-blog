@@ -17,8 +17,8 @@ $result = mysqli_query($conn, $sql);
 <body class="bg-gray-100 text-gray-800">
 
 
-<!-- header -->
-<?php include('./template/header.php'); ?>
+    <!-- header -->
+    <?php include('./template/header.php'); ?>
 
     <!-- Main Container -->
     <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row gap-6">
@@ -34,6 +34,7 @@ $result = mysqli_query($conn, $sql);
                     <img src="./image/single-image.jpg" alt="Blog Image" class="rounded-lg mb-4">
                     <h3 class="text-xl font-bold text-blue-600"> <?php echo  $row['title'] ?> </h3>
                     <p class="text-gray-600 text-sm mt-1"><?php echo  $row['created_at'] ?></p>
+
                     <p class="mt-3 text-gray-700"><?php echo  $row['description'] ?></p>
                     <a href="singelblog.php?id=<?php echo $row['id']; ?>" class="text-blue-600 hover:underline mt-3">Explor Blog</a>
                 </div>
@@ -42,6 +43,10 @@ $result = mysqli_query($conn, $sql);
 
             }
             ?>
+
+
+
+
 
 
         </div>

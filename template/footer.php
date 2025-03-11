@@ -22,10 +22,10 @@
       <div>
         <h2 class="text-xl font-bold">Follow Us</h2>
         <div class="flex justify-center md:justify-start space-x-4 mt-2">
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="text-white- hover:text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white hover:text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white hover:text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white hover:text-white"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>

@@ -66,8 +66,8 @@ $result = mysqli_query($conn, $sql);
                             <th class="border bg-gray-100 px-4 py-2">ID</th>
                             <th class="border bg-gray-100 px-4 py-2">Title</th>
                             <th class="border bg-gray-100 px-4 py-2">Description</th>
-                            <th class="border bg-gray-100 px-4 py-2">Category</th>
-                            <th class="border bg-gray-100 px-4 py-2">Action</th>
+                            <th class="border bg-gray-100 px-4 py-2">Edit</th>
+                            <th class="border bg-gray-100 px-4 py-2">Delete</th>
                         </tr>
                     </thead>
                     <tbody>

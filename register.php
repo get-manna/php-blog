@@ -1,7 +1,6 @@
 <?php
 include('./config/conection.php');
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -24,10 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 ?>
-
-
-
-
 
 
 <!DOCTYPE html>
@@ -59,10 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input name="password" type="password" id="password" class="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
                 <p class="mt-1 text-sm text-red-500 hidden" id="passwordError">Password must be at least 6 characters.</p>
             </div>
-            <button  type="submit" class="w-full px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"> submit </button>
+            <button type="submit" class="w-full px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"> submit </button>
 
         </form>
-    </div> 
+    </div>
 
     <script>
         document.getElementById('form').addEventListener('submit', function(event) {
