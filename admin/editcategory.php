@@ -42,7 +42,7 @@ if (mysqli_query($conn, $sql)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Add Post</title>
+    <title>Edit Category</title>
 </head>
 
 <body>

@@ -1,5 +1,6 @@
 <?php
 include('./config/conection.php');
+
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "SELECT * FROM posts WHERE id = $id";

@@ -1,4 +1,5 @@
 <?php
+
 include('./config/conection.php');
 $sql = "SELECT * FROM posts";
 $result = mysqli_query($conn, $sql);
@@ -31,7 +32,7 @@ $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
             ?>
                 <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-                    <img src="./image/single-image.jpg" alt="Blog Image" class="rounded-lg mb-4">
+                    <img src="/image/single-image.jpg" alt="Blog Image" class="rounded-lg mb-4">
                     <h3 class="text-xl font-bold text-blue-600"> <?php echo  $row['title'] ?> </h3>
                     <p class="text-gray-600 text-sm mt-1"><?php echo  $row['created_at'] ?></p>
 
@@ -44,15 +45,7 @@ $result = mysqli_query($conn, $sql);
             }
             ?>
 
-
-
-
-
-
         </div>
-
-
-
 
         <!-- Right Side: Category List -->
         <div class="w-full md:w-1/3 ">
@@ -72,21 +65,14 @@ $result = mysqli_query($conn, $sql);
 
                 <?php
                 }
-
                 ?>
             </ul>
         </div>
-
     </div>
-
     <!-- footer  -->
     <?php include('./template/footer.php'); ?>
-
-
 </body>
 
 </html>
-
-
 
 </html>
